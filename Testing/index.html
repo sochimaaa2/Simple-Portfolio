@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTING</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Home -->
+    <div id="home"  class="tab-content active">
+    <!-- Header_section -->
+     <div class="header">
+        <div class="logo">SOCHI.C</div>
+        <div class="Navs">
+            <div class="navs">
+                <a href="#" data-tab="home" class="Nav_links active">Home</a>
+                <a href="#" data-tab="Contact" class="Nav_links">Contact</a>
+                <a href="#" data-tab="Skills" class="Nav_links">Skills</a>
+            </div>
+        </div>
+    </div>
+     <!-- Header_section_ends -->
+
+     <!-- Main -->
+      <div class="main">
+        <img src="./images/5171ca23-f58d-4ccd-90c9-e0db5259ee92.jpg" alt="Logo" class="profile">
+        </div>
+        <div class="my_self"><h1>Hi, My name is Sochima.</h1> <br />
+        <h2>Am a Front-End and Back-End Developer,</h2>
+        <h3>Frontend developers craft user interfaces, ensuring beauty and usability; backend
+             developers build server logic, databases, and APIs powering applications seamlessly.</h3>
+        </div>
+        <div class="btn">
+            <button class="BTN">Download CV</button>
+        </div>
+      <!-- Main_ends -->
+    </div>
+    <!-- Home -->
+
+    <!-- Contact_section -->
+    <section id="Contact_section">
+    <div id="Contact" class="tab-content contact">
+        <h1>Contact Me</h1>
+        <h2>Lets Get In Contact @Chukwuonesochima@gmail.com</h2>
+        <div class="form">
+            <form action="">
+                <div class="name"><input type="text" placeholder="Full Name" required> <input type="email" placeholder="Email" required></div>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Message" required></textarea>
+                <button class="BTn">Send Message</button>
+            </form>
+            <a href="index.html" class="Nav_links" data-tab="home">Back to Home</a>
+        </div>
+    </div>
+    </section>
+    <!-- Contact_section_ends -->
+
+
+
+    <!-- Skills_section -->
+    <section id="Skills_section">
+    <div id="Skills" class="tab-content skills">
+        <h1>My Skills</h1>
+        <ul>
+            <li class="html">HTML</li>
+            <li class="css">CSS</li>
+            <li class="java">JavaScript</li>
+            <li class="react">React</li>
+            <li class="nodejs">Node.js</li>
+            <li class="python">Python</li>
+        </ul>
+          <a href="index.html" class="Nav_links" data-tab="home">Back to Home</a>
+        </div>
+    </section>
+    <!-- Skills_section_ends -->
+
+
+
+
+        <!-- Javascript_section -->
+    <script>
+        const links = document.querySelectorAll('.Nav_links');
+  const contents = document.querySelectorAll('.tab-content');
+
+  links.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      // Remove active from all links and contents
+      links.forEach(l => l.classList.remove('active'));
+      contents.forEach(c => c.classList.remove('active'));
+      // Add active to clicked link and corresponding content
+      this.classList.add('active');
+      document.getElementById(this.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+    </script>
+</body>
+</html>
